@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+.nav{
+  min-width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+  width: 330px;
+  transition: all 0.4s;
+  height: 55vh;
+  background-position: center;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card:not(:last-child){
+  margin-right: 3%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card_below{
+  bottom: -10%;
+  right: -14px;
+  min-width: 90%;
+  height: auto;
+  transition: all 0.4s;
 }
 
-.App-link {
-  color: #61dafb;
+.card_tag{
+  color: #3B3841;
+  font-size: 13px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card_title{
+  color: #0D0321;
+  font-size: 17;
+  letter-spacing: 1px;
+}
+
+.card_hr{
+  width: 10%;
+  border: 2px solid #FDC221;
+}
+
+.card_author{
+  color: #0D0321;
+  font-size: 14px;
+}
+
+.card_time{
+  color: #817C8A;
+  font-size: 13px;
+}
+
+.card img{
+  transition: all 0.4s ease-in-out;
+}
+
+.card_below:hover .stats{
+  max-height: 500px;
+  -webkit-transition: max-height 1.9s;
+  transition: max-height 1.9s;
+}
+
+.card_below:hover .card{
+  height: 500px;
+}
+
+.search{
+  border-color: #AFE37B;
+  width: 80vh;
+  max-height: 4.9vh;
+  border-radius: 0;
+}
+
+.search_div{
+  border-color: #AFE37B;
+}
+
+svg{
+  color: #AFE37B;
+}
+
+.custom{
+  background:#B5E781;
+  border: none;
+  border-radius: 15px;
+  clip-path: polygon(0 21%, 100% 9%, 90% 100%, 3% 100%);
+
+}
+
+.hr{
+      border-left: 2px solid black;
+      height: 20px;
+    
+}
+
+.stats{
+  color: #C8C5CF;
+  font-size: 13px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover .stats{
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover img{
+  transition: all 0.4s ease-in-out;
+  transform: scaleY(1.1);
 }
